@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111 110" role="img" aria-labelledby="title">
+  <title id="title">Wyatt Construction logo</title>
+  <defs>
+    <linearGradient id="leftInner" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#d9e4ec"/>
+    </linearGradient>
+    <linearGradient id="rightInner" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#d9e4ec"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left and right upright sides of the structure -->
+  <path fill="#07558a" d="M55.5 7.5 15.5 30.2v47.6l40 22.7V78.2L29 63.3V39.1l26.5-15.2z"/>
+  <path fill="#173c69" d="M55.5 7.5 95.5 30.2v47.6l-40 22.7V78.2L82 63.3V39.1L55.5 23.9z"/>
+
+  <!-- Central inner faces -->
+  <path fill="#0b4778" d="M55.5 7.5 55.5 78.2 29 63.3V39.1z"/>
+  <path fill="#102f59" d="M55.5 7.5 82 39.1v24.2L55.5 78.2z"/>
+
+  <!-- Open interior light faces -->
+  <path fill="url(#leftInner)" d="M29 39.1 42.8 31.2v48.1L29 63.3z"/>
+  <path fill="url(#rightInner)" d="M82 39.1 68.2 31.2v48.1L82 63.3z"/>
+
+  <!-- Lower interlocking floor facets -->
+  <path fill="#fff" d="M42.8 79.3 55.5 72.1 68.2 79.3 82 63.3 55.5 48.1 29 63.3z" opacity="0"/>
+  <path fill="#fff" d="M42.8 79.3 55.5 72.1 82 63.3 68.2 79.3 55.5 87.1z"/>
+  <path fill="#fff" d="M29 63.3 55.5 48.1 82 63.3 68.2 71.2 55.5 63.9 42.8 71.2z" opacity="0"/>
+
+  <!-- Blue base / outer lower hexagon -->
+  <path fill="#087eb8" d="M15.5 77.8 29 63.3 55.5 78.2 82 63.3 95.5 77.8 55.5 100.5z"/>
+
+  <!-- White central zig-zag opening -->
+  <path fill="#fff" d="M29 63.3 55.5 48.1 82 63.3 68.2 71.2 55.5 63.9 42.8 71.2z"/>
+  <path fill="#087eb8" d="M29 63.3 42.8 71.2 42.8 87.2z"/>
+  <path fill="#087eb8" d="M42.8 71.2 55.5 63.9 68.2 71.2 42.8 87.2z"/>
+</svg>

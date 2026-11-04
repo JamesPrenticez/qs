@@ -1,0 +1,98 @@
+body {
+  background: rgb(204,204,204); 
+}
+page {
+  position: relative;
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  /* box-shadow: 0 0 0.5cm rgba(0,0,0,0.5); */
+}
+page[size="A4"] {  
+  width: 21cm;
+  height: 29.7cm;
+  padding: 1cm; 
+}
+page[size="A4"][layout="landscape"] {
+  width: 29.7cm;
+  height: 21cm;  
+}
+page[size="A3"] {
+  width: 29.7cm;
+  height: 42cm;
+}
+page[size="A3"][layout="landscape"] {
+  width: 42cm;
+  height: 29.7cm;  
+}
+page[size="A5"] {
+  width: 14.8cm;
+  height: 21cm;
+}
+page[size="A5"][layout="landscape"] {
+  width: 21cm;
+  height: 14.8cm;  
+}
+@page {
+  size: A4;
+  margin: 0;
+}
+.back, .download {
+  position: fixed;
+  z-index: 100;
+  top: 12px;
+  left: 12px;
+  padding: 6px 14px;
+  background: black;
+  color: white;
+  font: 500 14px Roboto, sans-serif;
+  text-decoration: none;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.back {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  padding: 6px 18px;
+}
+.download {
+  top: auto;
+  left: auto;
+  bottom: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4da3ff, #1a56db);
+  box-shadow: 0 4px 12px rgba(26, 86, 219, 0.4);
+}
+@keyframes pounce {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-10px); }
+  60% { transform: translateY(0); }
+  80% { transform: translateY(-4px); }
+}
+// intro on the button, hover on the svg, so leaving hover doesn't replay the intro
+.download {
+  animation: pounce 0.6s 5s 1;
+  &:hover svg { animation: pounce 0.6s; }
+}
+@media print {
+  .back, .download {
+    display: none;
+  }
+  body {
+    print-color-adjust: exact;
+  }
+  body, page {
+    background: white;
+    margin: 0;
+    box-shadow: 0;
+  }
+}

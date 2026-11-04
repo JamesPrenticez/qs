@@ -1,0 +1,75 @@
+// Project-led layout used by qs.html: a role header, then one row per project (facts left, what I did right).
+.role {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0 8px;
+
+  &__when {
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+.role-note {
+  margin: 0 0 4px 40px;
+  font-size: 11px;
+  line-height: 16px;
+  color: @color-grey-dark;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 4.6cm 1fr;
+  gap: 0 12px;
+  padding: 5px 0;
+  border-top: 1px solid #e3e3e3;
+
+  &__facts h4 {
+    margin-bottom: 1px;
+  }
+
+  &__facts h5 strong {
+    font-weight: 700;
+    color: @color-black;
+  }
+
+  ul {
+    padding-left: 14px;
+  }
+
+  li {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
+.duties {
+  margin: 0 0 6px 40px;
+  padding-left: 14px;
+
+  li {
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom: 3px;
+  }
+}
+
+.also {
+  font-size: 11px;
+  line-height: 16px;
+  margin: 8px 0 0;
+  padding-top: 8px;
+  border-top: 1px solid #e3e3e3;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+
+  p {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
