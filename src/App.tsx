@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
 import { Highlight } from "./components/Highlight";
+import { HeroCrane } from "./components/HeroCrane";
 import { ProjectCard } from "./components/ProjectCard";
 import { ProjectModal, type Selected } from "./components/ProjectModal";
 import { companies } from "./data/projects";
@@ -41,10 +42,12 @@ const Navbar = styled.nav`
 `;
 
 const Hero = styled.header`
+  position: relative;
+  overflow: hidden;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.55);
 
-  > div { padding: 24px 16px 18px; }
+  > div { position: relative; padding: 36px 16px 26px; }
 
   h1 {
     margin: 0;
@@ -211,6 +214,9 @@ const Footer = styled.footer`
   }
 `;
 
+/** flip to false to hide the hero crane */
+const SHOW_CRANE = false;
+
 const all = companies.flatMap((c) => c.projects.map((p) => ({ p, company: c })));
 const highlights = all.filter(({ p }) => p.feature).sort((a, b) => a.p.feature!.rank - b.p.feature!.rank);
 const featured = all.length;
@@ -235,6 +241,7 @@ export default function App() {
       </Navbar>
 
       <Hero>
+        {SHOW_CRANE && <HeroCrane />}
         <div>
           <h1>Quantity Surveying</h1>
           <p>James Prentice · Estimating · Schedules of Quantities · Contract Admin</p>

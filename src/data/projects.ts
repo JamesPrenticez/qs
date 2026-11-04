@@ -209,7 +209,7 @@ export const companies: Company[] = [
         type: "Elemental Estimate & sub-contractor engagement for Stage 1 – Earthworks",
         location: "Takapuna, Auckland",
         gfa: "3,210m²",
-        value: "$14m (est.)",
+        value: "$14m",
         image: "space2.jpg",
         href: "https://www.channelmag.co.nz/channel/features/rethinking-the-way-we-live/",
         icon: "building-o",
