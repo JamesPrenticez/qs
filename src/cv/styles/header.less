@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  margin-bottom: 8px;
+
+  &__left {
+    width: 100%;
+  }
+
+  &__right {
+    flex-grow: 1;
+    text-align: right;
+
+    div {
+      margin-top: 8px;
+      display: grid;
+      gap: 0px 8px;
+      grid-template-columns: 25px 1fr;
+    }
+
+    small {
+      line-height: 20px;
+      font-size: 10px;
+      white-space: nowrap;
+    }
+  }
+}

@@ -210,8 +210,8 @@ export default function App() {
         <strong>JP · QS</strong>
         <a href="#highlights">Highlights</a>
         <a href="#portfolio">Portfolio</a>
-        <a href="https://jamesprenticez.github.io/">
-          <i className="fa fa-fw fa-home" /> Blog
+        <a href="./cv.html">
+          <i className="fa fa-fw fa-file-text-o" /> CV
         </a>
       </Navbar>
 
