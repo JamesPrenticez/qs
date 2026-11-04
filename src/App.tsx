@@ -23,7 +23,7 @@ const Navbar = styled.nav`
   align-items: center;
   gap: 4px;
   padding: 0 12px;
-  overflow-x: auto;
+  overflow: auto hidden;
   white-space: nowrap;
   background: rgba(18, 19, 20, 0.92);
   backdrop-filter: blur(6px);
