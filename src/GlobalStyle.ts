@@ -1,41 +1,29 @@
 import { createGlobalStyle } from "styled-components";
-import { color, img } from "./theme";
+import { color, font, grid } from "./theme";
 
 export const GlobalStyle = createGlobalStyle`
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { color-scheme: dark; scroll-behavior: smooth; scroll-padding-top: 64px; }
+
   body {
     margin: 0;
-    font-family: Verdana;
-    color: white;
-    background-color: black;
-    background-image: url(${img("textures/inflicted.png")});
+    font-family: ${font.body};
+    color: ${color.paper};
+    background-color: ${color.ink};
+    ${grid()}
   }
 
-  ::selection {
-    color: white;
-    background: black;
-  }
+  /* modal open: freeze the page behind it */
+  body:has(dialog[open]) { overflow: hidden; }
 
-  h1, h2 {
-    font-family: 'Eagle Lake', cursive;
-    margin: 0;
-    text-align: center;
-  }
+  ::selection { color: ${color.ink}; background: ${color.gold}; }
 
-  h1 {
-    font-size: 2em;
-    line-height: 1.5em;
-    padding: 10px 0 5px;
-  }
+  a { color: ${color.gold}; text-decoration: none; }
 
-  h2 {
-    font-size: 1em;
-    line-height: 1em;
-    color: ${color.gold};
-    padding: 5px 0 10px;
-  }
+  :focus-visible { outline: 3px solid ${color.gold}; outline-offset: 2px; }
 
-  a {
-    color: ${color.blue};
-    text-decoration: none;
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
   }
 `;
