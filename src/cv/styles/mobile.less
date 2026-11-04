@@ -1,0 +1,32 @@
+// Small screens: drop the fixed A4 sheet, stack columns, bump text. Must be imported last. Print is unaffected.
+@media screen and (max-width: 800px) {
+  body { padding-top: 56px; }
+
+  page[size="A4"] {
+    width: auto;
+    height: auto;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+
+  footer { display: none; }
+
+  h1 { font-size: 32px; line-height: 38px; }
+  h2 { font-size: 18px; line-height: 26px; }
+  h3 { font-size: 16px; line-height: 20px; }
+  h4 { font-size: 15px; line-height: 20px; }
+  h5 { font-size: 13px; line-height: 18px; }
+  p, .skills p, .also, .role-note { font-size: 14px; line-height: 21px; }
+  li, .project li { font-size: 14px; line-height: 21px; }
+
+  .header { flex-direction: column; }
+  .header__right {
+    text-align: left;
+    small { font-size: 12px; white-space: normal; }
+  }
+
+  .skills { grid-template-columns: 1fr; }
+
+  .project { grid-template-columns: 1fr; gap: 4px; padding: 10px 0; }
+  .role-note { margin-left: 0; }
+}

@@ -79,6 +79,26 @@ const Counts = styled.dl`
   dd { margin: 0; color: ${color.gold}; font: 400 1.5rem/1.2 ${font.stencil}; }
 `;
 
+const Cta = styled.a`
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 36px;
+  background: ${color.gold};
+  color: ${color.ink};
+  font: 800 1.2rem/1 ${font.head};
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 2px solid ${color.ink};
+  box-shadow: 5px 5px 0 ${color.paper};
+  transition: transform 0.1s, box-shadow 0.1s;
+
+  &:hover {
+    color: ${color.ink};
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0 ${color.paper};
+  }
+`;
+
 const Wrap = styled.main`
   max-width: 1500px;
   margin: 0 auto;
@@ -224,6 +244,9 @@ export default function App() {
             <div><dt>Projects worked on</dt><dd>{worked}</dd></div>
             <div><dt>2D &amp; 3D take-off</dt><dd>CostX</dd></div>
           </Counts>
+          <Cta href="./cv.html">
+            View CV <i className="fa fa-fw fa-file-text-o" />
+          </Cta>
         </div>
         <div className="tape" />
       </Hero>
