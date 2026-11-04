@@ -27,6 +27,7 @@ const Navbar = styled.nav`
     color: ${color.gold};
     font: 400 1.2rem/1 ${font.stencil};
     letter-spacing: 0.05em;
+    a { padding: 14px 0; color: inherit; font: inherit; letter-spacing: inherit; }
   }
 
   a {
@@ -210,9 +211,7 @@ const Footer = styled.footer`
   }
 `;
 
-// flat list so a project keeps the same sheet number everywhere
 const all = companies.flatMap((c) => c.projects.map((p) => ({ p, company: c })));
-const sheets = new Map(all.map(({ p }, i) => [p, i + 1]));
 const highlights = all.filter(({ p }) => p.feature).sort((a, b) => a.p.feature!.rank - b.p.feature!.rank);
 const featured = all.length;
 const other = companies.reduce((n, c) => n + c.also.length, 0);
@@ -227,7 +226,7 @@ export default function App() {
     <>
       <GlobalStyle />
       <Navbar>
-        <strong>JP · QS</strong>
+        <strong><a href="#">JP · QS</a></strong>
         <a href="#highlights">Highlights</a>
         <a href="#portfolio">Portfolio</a>
         <a href="./cv.html">
@@ -266,7 +265,7 @@ export default function App() {
                 key={p.title}
                 p={p}
                 who={`${company.name.split(" / ")[0]} · ${company.years.slice(0, 4)}`}
-                onOpen={() => setOpen({ p, company, sheet: sheets.get(p)! })}
+                onOpen={() => setOpen({ p, company })}
               />
             ))}
           </Highlights>
@@ -296,7 +295,7 @@ export default function App() {
 
             <Grid>
               {c.projects.map((p) => (
-                <ProjectCard key={p.title} p={p} sheet={sheets.get(p)!} onOpen={() => setOpen({ p, company: c, sheet: sheets.get(p)! })} />
+                <ProjectCard key={p.title} p={p} onOpen={() => setOpen({ p, company: c })} />
               ))}
             </Grid>
 

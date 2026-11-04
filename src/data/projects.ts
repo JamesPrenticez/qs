@@ -33,7 +33,11 @@ export const companies: Company[] = [
     projects: [
       {
         title: "66 Innes Road – Townhouses",
-        feature: { rank: 6, pitch: "Contract admin for 15 townhouses, procuring long-lead items through COVID delays" },
+        feature: {
+          rank: 6,
+          pitch:
+            "Contract admin for 15 townhouses, procuring long-lead items through COVID delays",
+        },
         tag: "Contract Admin",
         type: "Contract Administration",
         location: "Christchurch",
@@ -93,6 +97,22 @@ export const companies: Company[] = [
     years: "2020",
     projects: [
       {
+        title: "Kahikatea Townhouses ×5",
+        tag: "Contractor's Estimate",
+        type: "Contractor's Estimate – townhouses / apartments",
+        location: "Nelson Bays",
+        gfa: "5 × 180m²",
+        value: "$820k each",
+        image: "kahikatea.webp",
+        about:
+          "Five two-storey duplex units built as investments for the main shareholder of Jennian Homes Nelson Bays.",
+        scope: [
+          "Measured and priced P&G and carpentry",
+          "Secured sub-contractor quotes",
+          "Prepared the 20-page sales document",
+        ],
+      },
+      {
         title: "Block B – 70 Coster Street",
         tag: "Contractor's Estimate",
         type: "Contractor's Estimate – townhouses / apartments",
@@ -109,32 +129,31 @@ export const companies: Company[] = [
           "Prepared the 20-page sales document",
         ],
       },
+
       {
-        title: "Miles Residence",
+        title: "Jennian Show Home",
         tag: "Design / Build",
         type: "Design / Build Lump Sum Pricing",
         location: "Richmond",
         gfa: "166m²",
-        value: "$399K",
+        value: "$1.2m",
+        image: "showhome.webp",
         icon: "home",
         about:
-          "Measured from concept-level plans. The initial price came in at $427K; across six revisions, working closely with the sales consultant, we brought it within the client's budget at $399K. A fantastic outcome for everyone.",
-        scope: [
-          "Take-off from concept plans",
-          "Six pricing revisions, $427K down to $399K",
-          "Prepared the client sales document",
-        ],
+          "Measured from concept-level plans. High end spec home put foward for home of the year award and recieved 2nd place.",
+        scope: ["Take-off from concept plans", "Internal showhome"],
       },
       {
-        title: "Southern Series – Standard House Plans",
+        title: "Southern Series – Standard House Plans x16",
         tag: "Indicative Pricing",
         type: "Indicative Sales Pricing",
-        location: "Various",
+        location: "Nelson Bays",
         gfa: "106 – 201m²",
         value: "$281K – $428K",
+        image: "southern.webp",
         icon: "th-large",
         about:
-          "Sixteen standard plans, repriced every quarter for the company. When I started I measured each design from scratch so pricing was accurate and up to date. All trades are on agreed rates, which meant measuring plumbing and electrical too – a great learning opportunity.",
+          "16 standard plans, repriced every quarter for the company. When I started I measured each design from scratch so pricing was accurate and up to date. All trades are on agreed rates, which meant measuring plumbing and electrical too – a great learning opportunity.",
         scope: [
           "Full take-off of 16 plans, from 106m² through to 201m²",
           "Quarterly price updates",
@@ -143,12 +162,11 @@ export const companies: Company[] = [
       },
     ],
     also: [
-      ["Stage 6 – Kahikatea Townhouses", "×5"],
-      ["Browns and Robbins"],
-      ["Bell"],
-      ["Maetzig"],
+      ["Browns and Robbins Residence"],
+      ["Bell Residence"],
+      ["Maetzig Residence"],
+      ["Miles Residence"],
       ["Hutton Family Trust"],
-      ["Jennian Homes Show Home"],
     ],
   },
   {
@@ -159,7 +177,11 @@ export const companies: Company[] = [
     projects: [
       {
         title: "Rethinking.Space 1",
-        feature: { rank: 4, pitch: "Rebuilt an inherited budget and engaged trades for a 46-apartment ICF building" },
+        feature: {
+          rank: 4,
+          pitch:
+            "Rebuilt an inherited budget and engaged trades for a 46-apartment ICF building",
+        },
         tag: "New Build",
         type: "New build – make sense of budget prepared by others, engage contractors",
         location: "Panmure, Auckland",
@@ -178,7 +200,11 @@ export const companies: Company[] = [
       },
       {
         title: "Rethinking.Space 2",
-        feature: { rank: 3, pitch: "In from day one: elemental estimate and cost advice to the design team, plus tender systems" },
+        feature: {
+          rank: 3,
+          pitch:
+            "In from day one: elemental estimate and cost advice to the design team, plus tender systems",
+        },
         tag: "Elemental Estimate",
         type: "Elemental Estimate & sub-contractor engagement for Stage 1 – Earthworks",
         location: "Takapuna, Auckland",
@@ -207,7 +233,11 @@ export const companies: Company[] = [
     projects: [
       {
         title: "Otago Polytechnic – Campus Development",
-        feature: { rank: 1, pitch: "2D take-off for a $22m glulam timber campus building, from concept to detailed design" },
+        feature: {
+          rank: 1,
+          pitch:
+            "2D take-off for a $22m glulam timber campus building, from concept to detailed design",
+        },
         tag: "Concept to Detailed Design",
         type: "Preliminary, concept and detailed design estimates – measure with some minor pricing",
         location: "Dunedin",
@@ -226,7 +256,10 @@ export const companies: Company[] = [
       },
       {
         title: "TXP – Dunedin Airport Terminal Expansion",
-        feature: { rank: 5, pitch: "Carpentry and linings SOQ for the airport terminal expansion" },
+        feature: {
+          rank: 5,
+          pitch: "Carpentry and linings SOQ for the airport terminal expansion",
+        },
         tag: "Schedule of Quantities",
         type: "Schedule of Quantities for Builder (Carpentry)",
         location: "Dunedin Airport",
@@ -237,11 +270,19 @@ export const companies: Company[] = [
         icon: "plane",
         about:
           "I worked alongside a senior QS on the SOQ for the carpentry and plasterboard linings trades plus a few concrete steps and ramps. I picked up the isolated buildings and stairwells while he took off the main structure.",
-        scope: ["Carpentry and plasterboard linings SOQ", "Concrete steps and ramps", "Isolated buildings and stairwells"],
+        scope: [
+          "Carpentry and plasterboard linings SOQ",
+          "Concrete steps and ramps",
+          "Isolated buildings and stairwells",
+        ],
       },
       {
         title: "Spotlight + Harvey Norman – Moorhouse Ave",
-        feature: { rank: 2, pitch: "Elemental take-off for an 8,000m² post-earthquake flagship retail store" },
+        feature: {
+          rank: 2,
+          pitch:
+            "Elemental take-off for an 8,000m² post-earthquake flagship retail store",
+        },
         tag: "Elemental Estimate",
         type: "Elemental Estimate – measure only",
         location: "Christchurch",
@@ -252,7 +293,10 @@ export const companies: Company[] = [
         icon: "shopping-cart",
         about:
           "Post-earthquake big-box retail construction. A relatively simple take-off, with a few amendments to the structural design as it progressed from concept into developed design. Pricing was carried out by a senior QS in Christchurch.",
-        scope: ["Elemental take-off across concept and developed design", "Tracked structural design changes between stages"],
+        scope: [
+          "Elemental take-off across concept and developed design",
+          "Tracked structural design changes between stages",
+        ],
       },
       {
         title: "Highlands Motorsport Park – Pit Lane Apartments",
@@ -266,7 +310,9 @@ export const companies: Company[] = [
         icon: "flag-checkered",
         about:
           "I took a lot of pride in this SOQ because it was for my previous employer, Breens, and I wanted to do an excellent job. I also thoroughly enjoyed this style of apartment construction.",
-        scope: ["Multi-trade SOQ: excavation, carpentry, concrete, structural steel and linings"],
+        scope: [
+          "Multi-trade SOQ: excavation, carpentry, concrete, structural steel and linings",
+        ],
       },
       {
         title: "Filleul St – Hotel",
@@ -278,7 +324,8 @@ export const companies: Company[] = [
         image: "filluel.PNG",
         href: "https://www.odt.co.nz/news/dunedin/central-dunedin-hotel-gets-consent",
         icon: "bed",
-        about: "A new-build, 27-room (40-bed) hotel in central Dunedin, estimated at elemental level.",
+        about:
+          "A new-build, 27-room (40-bed) hotel in central Dunedin, estimated at elemental level.",
         scope: ["Elemental Estimate"],
       },
       {
@@ -292,7 +339,10 @@ export const companies: Company[] = [
         icon: "graduation-cap",
         about:
           "A desperately needed rebuild: a large open space created with portal frames, plus remedial work to interior and exterior landscaping. A messy job – the architect's documents contradicted each other in several places – which taught me how to resolve those errors productively.",
-        scope: ["Prepared the SOQ issued to tender (two issues)", "Reconciled contradictory architectural documents"],
+        scope: [
+          "Prepared the SOQ issued to tender (two issues)",
+          "Reconciled contradictory architectural documents",
+        ],
       },
       {
         title: "Clinton School – Weathertightness Remedial Works",
@@ -320,26 +370,54 @@ export const companies: Company[] = [
         icon: "home",
         about:
           "The type of project I enjoy most, probably due to my roots with Breen Homes. The house sits atop a small hill and needed considerable excavation to level the site and form-in a half-sunken garage, and it includes a pool. A supplied 3D model helped explore the more complex details.",
-        scope: ["Bulk excavation and half-sunken garage", "Pool", "Used the 3D model to pin down complex details"],
+        scope: [
+          "Bulk excavation and half-sunken garage",
+          "Pool",
+          "Used the 3D model to pin down complex details",
+        ],
       },
     ],
     also: [
-      ["Cadbury Factory", "Heritage façade restoration and earthquake strengthening · EE"],
+      [
+        "Cadbury Factory",
+        "Heritage façade restoration and earthquake strengthening · EE",
+      ],
       ["Riselaw Road School", "Unused school turned into office space · EE"],
       ["Meridian Mall", "Measured a shop to determine GFA for rent purposes"],
       ["Hill Side Road", "Two-storey house · EE"],
-      ["Archibald Baxter Memorial", "Footpath, stairs, outdoor seating and statue, Dunedin · EE"],
+      [
+        "Archibald Baxter Memorial",
+        "Footpath, stairs, outdoor seating and statue, Dunedin · EE",
+      ],
       ["Crombie Residence", "Two-storey architectural house, Queenstown · EE"],
       ["Ashburton School", "Open learning space upgrade · EE"],
       ["Dunedin Baptist Church", "Auditorium and lobby · Concept EE"],
-      ["Ashburn Clinic", "Rehab centre, multiple buildings upgraded or extended · Detailed EE"],
+      [
+        "Ashburn Clinic",
+        "Rehab centre, multiple buildings upgraded or extended · Detailed EE",
+      ],
       ["Lincoln Hub Campus Development", "Metalwork trade · SOQ revision"],
-      ["Lincoln Fire Station", "Changing room and toilet block extension · priced SOQ"],
+      [
+        "Lincoln Fire Station",
+        "Changing room and toilet block extension · priced SOQ",
+      ],
       ["Middleton Road", "Driveway and garage · EE"],
-      ["Gelita Christchurch", "Supporting the Christchurch QS on fire damage and rebuild"],
-      ["Taieri School", "Measured tiered seating structure for a new auditorium · SOQ"],
-      ["Queenstown House", "Picked up from the QS I replaced and updated his SOQ"],
-      ["University of Otago Dental School", "Main contractor vs. plasterboard sub-contractor liquidation claim"],
+      [
+        "Gelita Christchurch",
+        "Supporting the Christchurch QS on fire damage and rebuild",
+      ],
+      [
+        "Taieri School",
+        "Measured tiered seating structure for a new auditorium · SOQ",
+      ],
+      [
+        "Queenstown House",
+        "Picked up from the QS I replaced and updated his SOQ",
+      ],
+      [
+        "University of Otago Dental School",
+        "Main contractor vs. plasterboard sub-contractor liquidation claim",
+      ],
     ],
   },
   {
@@ -358,7 +436,11 @@ export const companies: Company[] = [
         icon: "home",
         about:
           "A single-storey, semi-architectural home. Rare for Breen Homes, I priced from a full set of consent documents rather than in-house concept drawings. The client's architect, acting as their representative, was meticulous. We worked through a few changes, secured the contract, then the client issued a revised set with many changes and we repriced to their satisfaction. The architect personally acknowledged the calibre of my work and clear communication.",
-        scope: ["Full tender from consent documents", "Negotiated changes (NTT) through to contract", "Repriced a heavily revised document set"],
+        scope: [
+          "Full tender from consent documents",
+          "Negotiated changes (NTT) through to contract",
+          "Repriced a heavily revised document set",
+        ],
       },
       {
         title: "Fulton Hogan – Relocatable Office",
@@ -370,7 +452,11 @@ export const companies: Company[] = [
         icon: "industry",
         about:
           "An office space built on a typical timber floor with corrugated cladding and roofing. A few features made it more commercial: accessible ramps, fire systems and a largely open-plan layout. Like most Breens projects, I did all the pre-contract work before handover to the site manager for contract admin.",
-        scope: ["Prepared the schedule", "Let the sub-trades", "Wrote the tender letter"],
+        scope: [
+          "Prepared the schedule",
+          "Let the sub-trades",
+          "Wrote the tender letter",
+        ],
       },
       {
         title: "Hermitage Village – Mt Cook ×3 Relocatables",
@@ -382,7 +468,10 @@ export const companies: Company[] = [
         icon: "truck",
         about:
           "A unique design-build: three large relocatable workers' accommodation huts built in the Breens yard in Wanaka and transported to a remote site at Mt Cook.",
-        scope: ["Scheduled and managed all sub-contractors", "Coordinated foundation work on the remote site"],
+        scope: [
+          "Scheduled and managed all sub-contractors",
+          "Coordinated foundation work on the remote site",
+        ],
       },
     ],
     also: [

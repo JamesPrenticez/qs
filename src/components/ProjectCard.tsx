@@ -69,17 +69,6 @@ export const Badge = styled.span`
   text-transform: uppercase;
 `;
 
-const Sheet = styled.span`
-  top: 10px;
-  right: 10px;
-  padding: 3px 7px;
-  background: rgba(0, 0, 0, 0.7);
-  border: 1px solid ${color.gold};
-  color: ${color.gold};
-  font: 700 0.8rem/1.2 ${font.head};
-  letter-spacing: 0.1em;
-`;
-
 /* ---------- card ---------- */
 
 const Card = styled.button`
@@ -176,12 +165,11 @@ const More = styled.span`
   }
 `;
 
-export function ProjectCard({ p, sheet, onOpen }: { p: Project; sheet: number; onOpen: () => void }) {
+export function ProjectCard({ p, onOpen }: { p: Project; onOpen: () => void }) {
   return (
     <Card type="button" onClick={onOpen} aria-label={`${p.title}: view details`}>
       <ProjectMedia p={p}>
         <Badge>{p.tag}</Badge>
-        <Sheet>P-{String(sheet).padStart(2, "0")}</Sheet>
       </ProjectMedia>
       <Body>
         <h3>{p.title}</h3>

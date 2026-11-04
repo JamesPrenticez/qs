@@ -7,7 +7,6 @@ import { Badge, ProjectMedia } from "./ProjectCard";
 export interface Selected {
   p: Project;
   company: Company;
-  sheet: number;
 }
 
 const pop = keyframes`
@@ -179,7 +178,7 @@ export function ProjectModal({ item, onClose }: { item: Selected | null; onClose
         <>
           <Tape />
           <Bar>
-            <span>Project data · Sheet P-{String(item.sheet).padStart(2, "0")}</span>
+            <span>Project data</span>
             <button type="button" onClick={close} aria-label="Close">
               <i className="fa fa-times" aria-hidden />
             </button>
