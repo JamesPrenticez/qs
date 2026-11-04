@@ -251,7 +251,7 @@ export const companies: Company[] = [
         scope: [
           "2D take-off of the ECL building, assisted by an early-stage 3D model",
           "Estimates at preliminary, concept and detailed design stages",
-          "Some minor pricing involvement",
+          "Cost planning rate build up",
         ],
       },
       {
