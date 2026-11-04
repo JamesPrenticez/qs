@@ -7,6 +7,13 @@ import { ProjectCard } from "./components/ProjectCard";
 import { ProjectModal, type Selected } from "./components/ProjectModal";
 import { companies } from "./data/projects";
 import { color, font, hazard } from "./theme";
+import wyatt from "./cv/imgs/wyatt_logo.svg";
+import jennian from "./cv/imgs/jennian_logo.svg";
+import legacy from "./cv/imgs/rethinking_logo.svg";
+import rawlinsons from "./cv/imgs/rawlinsons_logo.svg";
+import breen from "./cv/imgs/breen_logo.svg";
+
+const logos: Record<string, string> = { wyatt, jennian, legacy, rawlinsons, breen };
 
 const Navbar = styled.nav`
   position: sticky;
@@ -123,6 +130,13 @@ const SectionHead = styled.div`
     color: ${color.ink};
     font: 400 clamp(1.2rem, 3vw, 1.8rem) / 1 ${font.stencil};
     white-space: nowrap;
+  }
+
+  .logo {
+    align-self: center;
+    width: 52px;
+    height: 52px;
+    margin-left: 16px;
   }
 
   h2 {
@@ -243,8 +257,8 @@ export default function App() {
       <Hero>
         {SHOW_CRANE && <HeroCrane />}
         <div>
-          <h1>Quantity Surveying</h1>
-          <p>James Prentice · Estimating · Schedules of Quantities · Contract Admin</p>
+          <h1>Quantity Surveying Portfolio</h1>
+          <p>James Prentice · Diploma in Quantity Surveying</p>
           <Counts>
             <div><dt>Years in industry</dt><dd>{years}</dd></div>
             <div><dt>Projects worked on</dt><dd>{worked}</dd></div>
@@ -294,6 +308,7 @@ export default function App() {
           <section key={c.id} id={c.id}>
             <SectionHead>
               <span className="years">{c.years}</span>
+              <img className="logo" src={logos[c.id]} alt="" />
               <h2>
                 {c.name}
                 <small>{c.place}</small>
