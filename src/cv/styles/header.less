@@ -10,14 +10,19 @@
     flex-grow: 1;
     text-align: right;
 
-    div {
+    > div {
       margin-top: 8px;
       display: grid;
       gap: 0px 8px;
       grid-template-columns: 25px 1fr;
+
+      > div { grid-column: 1 / -1; } // full-width row under the icon/text pairs
     }
 
     small {
+      display: block;
+      text-align: right;
+      margin-top: 2px;
       line-height: 20px;
       font-size: 10px;
       white-space: nowrap;
